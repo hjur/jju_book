@@ -1,5 +1,7 @@
-# Memo
+# Create by JJU
 
-<!-- - [Introduction](README.md) -->
+- [Create by JJU](./createByJju/createJju.md)
 
-- [Create by JJU](./memo/createJju.md)
+# Note
+
+- [memo](./note/memo.md)
