@@ -1,4 +1,4 @@
-# 명령어 : ./publish_jju-book.sh
+# 명령어 : .\publish_jju-book.sh
 # gitbook 의존 파일을 설치하고 gitbook 빌드를 돌린다.
 gitbook install && gitbook build
 
