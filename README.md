@@ -1,12 +1,18 @@
-# Create by JJU
+# jju_book
 
-## 쭈북 만들기
+> blog by hjur
 
-> 쭈북 생성의 기록
+## Build Setup
 
-## 준비물
+``` bash
+# install dependencies
+npm install
 
-```text
-github 계정
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
 ```
 
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
