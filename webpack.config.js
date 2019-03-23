@@ -2,26 +2,29 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    app: './src/main.js',
+    vendors: ['vue', 'vue-router']
+    // vendors: ['vue', 'vuex', 'vue-router', 'axios', 'jquery', 'swiper']
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: '[name].js',
+    chunkFilename: 'chunk.[name].js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/,
         use: [
           'vue-style-loader',
           'css-loader'
         ],
-      },      {
+      }, {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          loaders: {
-          }
+          loaders: {}
           // other vue-loader options go here
         }
       },
@@ -41,7 +44,13 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      'Config': path.resolve(__dirname, './src/config'),
+      'View': path.resolve(__dirname, './src/view'),
+      'Common': path.resolve(__dirname, './src/common'),
+      'Images': path.resolve(__dirname, './src/assets/images'),
+      //modules
+      'Modules': path.resolve(__dirname, '.node_modules')
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

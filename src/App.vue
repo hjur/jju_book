@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    hello jju book
+    app.vue
+    <router-view ref="view">
+    </router-view>
+
   </div>
 </template>
 
