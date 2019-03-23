@@ -1,19 +1,29 @@
 <template>
   <div>
     {{msg}}
+    <button @click="goMenu('ETC')">ETC</button>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'PageNotFound',
+  name: 'mainPage',
   computed: {},
   components: {
   },
   data() {
     return {
       msg: 'jju book 메인',
+    }
+  },
+  methods:{
+    goMenu(menuName){
+      if(menuName == 'ETC'){
+        this.$router.push({
+          name: 'etc'
+        })
+      }
     }
   }
 }
