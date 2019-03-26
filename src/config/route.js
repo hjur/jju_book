@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import Main from 'View/Main.vue';
 //ETC 카테고리
 import ETC from 'View/ETC/EtcMain.vue';
+//note 카테고리
+import MdGrammar from 'View/note/markdown/grammar.vue';
 //에러페이지
 import PageNotFound from 'View/PageNotFound.vue';
 
@@ -17,6 +19,10 @@ const routes = [{
     name: 'etc',
     path: root.concat('/etc'),
     component: ETC,
+  },{
+    name: 'md-grammar',
+    path: root.concat('/mdGrammar'),
+    component: MdGrammar,
   }]
   //404가 가장 마지막에 위치해야함
   .concat({

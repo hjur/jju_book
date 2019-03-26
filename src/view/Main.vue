@@ -2,6 +2,7 @@
   <div>
     {{msg}}
     <button @click="goMenu('ETC')">ETC</button>
+    <button @click="goMenu('md-grammar')">마크다운 작성법</button>
   </div>
 </template>
 
@@ -19,11 +20,9 @@ export default {
   },
   methods:{
     goMenu(menuName){
-      if(menuName == 'ETC'){
-        this.$router.push({
-          name: 'etc'
-        })
-      }
+      this.$router.push({
+        name: menuName
+      })
     }
   }
 }

@@ -47,12 +47,13 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       'Config': path.resolve(__dirname, './src/config'),
       'View': path.resolve(__dirname, './src/view'),
+      'MarkDown': path.resolve(__dirname, './src/markdown'),
       'Common': path.resolve(__dirname, './src/common'),
       'Images': path.resolve(__dirname, './src/assets/images'),
       //modules
-      'Modules': path.resolve(__dirname, '.node_modules')
+      'Modules': path.resolve(__dirname, '.node_modules'),
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.vue', '.json', '.md']
   },
   devServer: {
     historyApiFallback: true,
