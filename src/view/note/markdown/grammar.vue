@@ -1,6 +1,6 @@
 <template>
   <pre>
-    <code class="markdown" v-html="mdGrammar" />
+    <grammar/>
   </pre>
 </template>
 
@@ -10,15 +10,15 @@ export default {
   name: 'md-grammar',
   computed: {},
   components: {
-      grammar
+    grammar
   },
   data() {
     return {
       mdGrammar: grammar.source,
     }
   },
-  methods:{
-    
+  methods: {
+
   }
 }
 // import "SharedStyles/popup/popup.css";

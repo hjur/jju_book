@@ -39,6 +39,19 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.md$/,
+        use: [{
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+            options: {
+              /* your options here */
+            }
+          }
+        ]
       }
     ]
   },
@@ -80,9 +93,9 @@ if (process.env.NODE_ENV === 'production') {
       compress: {
         warnings: false
       }
-    // }),
-    // new webpack.LoaderOptionsPlugin({
-    //   minimize: true
+      // }),
+      // new webpack.LoaderOptionsPlugin({
+      //   minimize: true
     })
   ])
 }

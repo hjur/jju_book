@@ -3,6 +3,7 @@
     {{msg}}
     <button @click="goMenu('ETC')">ETC</button>
     <button @click="goMenu('md-grammar')">마크다운 작성법</button>
+    <button @click="goMenu('save-youtube')">유튜브 다운</button>
   </div>
 </template>
 
@@ -18,8 +19,8 @@ export default {
       msg: 'jju book 메인',
     }
   },
-  methods:{
-    goMenu(menuName){
+  methods: {
+    goMenu(menuName) {
       this.$router.push({
         name: menuName
       })
