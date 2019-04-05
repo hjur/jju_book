@@ -4,6 +4,9 @@ import VueRouter from 'vue-router'
 import Main from 'View/Main.vue';
 //ETC 카테고리
 import ETC from 'View/ETC/EtcMain.vue';
+//note 카테고리
+import MdGrammar from 'View/note/markdown/grammar.vue';
+import SaveYoutube from 'View/ETC/SaveYoutube.vue';
 //에러페이지
 import PageNotFound from 'View/PageNotFound.vue';
 
@@ -13,10 +16,18 @@ const routes = [{
     name: 'mainPage',
     path: root.concat('/'),
     component: Main,
-  },{
+  }, {
     name: 'etc',
     path: root.concat('/etc'),
     component: ETC,
+  }, {
+    name: 'md-grammar',
+    path: root.concat('/mdGrammar'),
+    component: MdGrammar,
+  }, {
+    name: 'save-youtube',
+    path: root.concat('/saveYoutube'),
+    component: SaveYoutube,
   }]
   //404가 가장 마지막에 위치해야함
   .concat({
