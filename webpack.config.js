@@ -43,14 +43,15 @@ module.exports = {
       {
         test: /\.md$/,
         use: [{
-            loader: "html-loader"
+            loader: 'vue-markdown-loader'
           },
-          {
-            loader: "markdown-loader",
-            options: {
-              /* your options here */
-            }
-          }
+          // {
+          //   loader: "markdown-loader",
+          //   options: {
+          //     // pedantic: true,
+          //     // renderer
+          //   }
+          // }
         ]
       }
     ]

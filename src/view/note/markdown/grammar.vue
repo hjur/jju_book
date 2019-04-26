@@ -1,27 +1,26 @@
 <template>
-  <pre>
-    <grammar/>
-  </pre>
+  <div>
+    <grammar />
+  </div>
 </template>
 
 <script>
-import { grammar } from "MarkDown/note/markdown/grammar.md"
+import grammar from "MarkDown/note/markdown/grammar.md"
 export default {
   name: 'md-grammar',
   computed: {},
   components: {
-    grammar
+    'grammar': grammar
   },
-  data() {
-    return {
-      mdGrammar: grammar.source,
-    }
-  },
+  // data() {
+  //   return {
+  //     mdGrammar: grammar.source,
+  //   }
+  // },
   methods: {
 
   }
 }
-// import "SharedStyles/popup/popup.css";
 </script>
 
 <style>

@@ -4,6 +4,7 @@
     <button @click="goMenu('ETC')">ETC</button>
     <button @click="goMenu('md-grammar')">마크다운 작성법</button>
     <button @click="goMenu('save-youtube')">유튜브 다운</button>
+    <button @click="goMenu('domestic-map')">지도</button>
   </div>
 </template>
 
