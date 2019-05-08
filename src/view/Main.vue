@@ -1,9 +1,11 @@
 <template>
   <div>
     {{msg}}
-    <button @click="goMenu('ETC')">ETC</button>
-    <button @click="goMenu('md-grammar')">마크다운 작성법</button>
-    <button @click="goMenu('save-youtube')">유튜브 다운</button>
+    {{msg}}
+    {{msg}}
+    {{msg}}
+    {{msg}}
+    {{msg}}
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
   },
   data() {
     return {
-      msg: 'jju book 메인',
+      msg: 'jju book 본문',
     }
   },
   methods: {

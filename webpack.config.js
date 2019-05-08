@@ -43,14 +43,15 @@ module.exports = {
       {
         test: /\.md$/,
         use: [{
-            loader: "html-loader"
+            loader: 'vue-markdown-loader'
           },
-          {
-            loader: "markdown-loader",
-            options: {
-              /* your options here */
-            }
-          }
+          // {
+          //   loader: "markdown-loader",
+          //   options: {
+          //     // pedantic: true,
+          //     // renderer
+          //   }
+          // }
         ]
       }
     ]
@@ -63,6 +64,7 @@ module.exports = {
       'MarkDown': path.resolve(__dirname, './src/markdown'),
       'Common': path.resolve(__dirname, './src/common'),
       'Images': path.resolve(__dirname, './src/assets/images'),
+      'Style': path.resolve(__dirname, './src/assets/style'),
       //modules
       'Modules': path.resolve(__dirname, '.node_modules'),
     },

@@ -1,18 +1,33 @@
 <template>
   <div id="app">
-    app.vue
-    <router-view ref="view">
-    </router-view>
+    <app-header> </app-header>
+    <hr class="division_line">
 
+    <app-aside> </app-aside>
+    <div class="app-body">
+      <router-view ref="view" class="app-content">
+      </router-view>
+    </div>
+    <app-footer> </app-footer>
   </div>
 </template>
 
 <script>
+import appHeader from "View/frame/header.vue"
+import appAside from "View/frame/aside.vue"
+import appFooter from "View/frame/footer.vue"
+import "Style/default.css"
+
 export default {
   name: 'app',
+  components: {
+    'app-header': appHeader,
+    'app-aside': appAside,
+    'app-footer': appFooter
+  },
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App' // https://wtss.tistory.com
     }
   }
 }

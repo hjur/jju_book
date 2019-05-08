@@ -1,0 +1,10 @@
+/*
+aside 
+*/
+
+
+.menu-container {
+  background-color: #FFD54F;
+  display: flex;
+  flex-direction: column
+}
