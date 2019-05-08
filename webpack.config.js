@@ -64,6 +64,7 @@ module.exports = {
       'MarkDown': path.resolve(__dirname, './src/markdown'),
       'Common': path.resolve(__dirname, './src/common'),
       'Images': path.resolve(__dirname, './src/assets/images'),
+      'Style': path.resolve(__dirname, './src/assets/style'),
       //modules
       'Modules': path.resolve(__dirname, '.node_modules'),
     },

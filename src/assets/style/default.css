@@ -1,0 +1,101 @@
+/*
+app default css
+
+header
+*/
+
+html {
+  font-size: 65%;
+}
+
+body {
+  background-color: #FFFDE7;
+  color: white;
+  font-size: 2.5em;
+  /* width: 70%; */
+
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-header {
+  background-color: #FFE082;
+  width: 100%;
+  height: 80px;
+}
+
+.app-aside {
+  background-color: #FFD54F;
+  width: 30%;
+  float: left;
+}
+
+.app-body {
+  background-color: #FF9800;
+  width: 70%;
+  float: left;
+}
+
+.app-body .app-content {
+  background-color: #FFCA28;
+  float: left;
+  margin: 5px;
+  z-index: -1;
+}
+
+.app-footer {
+  background-color: #FFE082;
+  width: 100%;
+  clear: both;
+  height: 150px;
+}
+
+.division_line {
+  display: block;
+  height: 0.5px;
+  margin: 0;
+  border-width: 1px 0 0;
+  border-top: 1px solid #FFFDE7;
+  background-color: #FFFDE7;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1220px) {
+  #app {
+    width: 95%;
+  }
+}
+
+/* @media (max-width: 768px) {
+  #app {
+    width: 100%;
+  }
+} */
+
+@media (max-width: 400px) {
+  #app {
+    width: 100%;
+  }
+
+  .app-header {
+    height: 80px;
+  }
+
+  .app-aside {
+    width: 100%;
+    height: 300px;
+    display: none;
+  }
+
+  .app-body {
+    width: 100%;
+    float: none;
+  }
+
+  .app-body .app-content {
+    float: none;
+  }
+}
