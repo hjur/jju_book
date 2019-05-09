@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      msg: 'jju book 본문',
+      msg: 'content',
     }
   },
   methods: {
