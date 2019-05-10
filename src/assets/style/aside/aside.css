@@ -62,8 +62,9 @@ aside
 
 .menu-depth2 {
   width: 100%;
-  background-color: #272727;
+  background-color: #383838;
   color: #8080FF;
+  font-weight: bold;
   text-align: left;
   padding: 8px 16px;
   display: block;
