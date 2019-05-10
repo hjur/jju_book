@@ -41,7 +41,7 @@ const routes = [{
   })
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: routes,
   //스크롤 이동 시 위치 to, from으로 분기 가능
   scrollBehavior(to, from, savedPosition) {
