@@ -2,9 +2,74 @@
 aside 
 */
 
+.side-menu-btn {
+  display: block;
+  color: #C7444A;
+}
 
-.menu-container {
-  background-color: #FFD54F;
-  display: flex;
-  flex-direction: column
+.side-menu-container {
+  background-color: #272727;
+  height: 100%;
+  width: 200px;
+  position: fixed !important;
+  z-index: 1;
+  overflow: auto
+}
+
+.page-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2
+}
+
+.animate {
+  position: relative;
+  animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0
+  }
+
+  to {
+    left: 0;
+    opacity: 1
+  }
+}
+
+
+.menu-depth1 {
+  width: 100%;
+  background-color: #272727;
+  color: #C7444A;
+  text-align: left;
+  padding: 8px 16px;
+  display: block;
+  border: none;
+  white-space: normal;
+  float: none;
+  outline: 0
+}
+
+.menu-depth2 {
+  width: 100%;
+  background-color: #272727;
+  color: #8080FF;
+  text-align: left;
+  padding: 8px 16px;
+  display: block;
+  text-indent: 10px;
+  border: none;
+  white-space: normal;
+  float: none;
+  outline: 0
 }

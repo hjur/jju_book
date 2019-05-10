@@ -1,10 +1,11 @@
 <template>
   <div class="app-header">
-    header
+    <div>header</div>
   </div>
 </template>
 
 <script>
+import "Style/header/header.css"
 export default {
   name: 'app-header',
   computed: {},

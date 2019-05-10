@@ -1,13 +1,13 @@
 <template>
   <div id="app">
+    <app-aside> </app-aside>
+    <hr class="division_line">
+
     <app-header> </app-header>
     <hr class="division_line">
 
-    <app-aside> </app-aside>
-    <div class="app-body">
-      <router-view ref="view" class="app-content">
-      </router-view>
-    </div>
+    <router-view ref="view" class="app-body">
+    </router-view>
     <app-footer> </app-footer>
   </div>
 </template>

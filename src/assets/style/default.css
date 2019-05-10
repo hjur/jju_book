@@ -9,11 +9,10 @@ html {
 }
 
 body {
-  background-color: #FFFDE7;
-  color: white;
+  background-color: #282828;
+  color: #9a9b99;
   font-size: 2.5em;
   /* width: 70%; */
-
 }
 
 #app {
@@ -22,33 +21,19 @@ body {
 }
 
 .app-header {
-  background-color: #FFE082;
-  width: 100%;
+  background-color: #282828;
+  color: #d0b344;
   height: 80px;
 }
 
-.app-aside {
-  background-color: #FFD54F;
-  width: 30%;
-  float: left;
-}
 
 .app-body {
-  background-color: #FF9800;
-  width: 70%;
-  float: left;
-}
-
-.app-body .app-content {
-  background-color: #FFCA28;
-  float: left;
-  margin: 5px;
-  z-index: -1;
+  background-color: #1e1e1e;
 }
 
 .app-footer {
-  background-color: #FFE082;
-  width: 100%;
+  background-color: #282828;
+  color: #676867;
   clear: both;
   height: 150px;
 }
@@ -58,22 +43,16 @@ body {
   height: 0.5px;
   margin: 0;
   border-width: 1px 0 0;
-  border-top: 1px solid #FFFDE7;
-  background-color: #FFFDE7;
+  border-top: 1px solid #4e4e4e;
+  background-color: #4e4e4e;
   box-sizing: border-box;
 }
 
-@media (max-width: 1220px) {
+/* @media (max-width: 1220px) {
   #app {
     width: 95%;
   }
 }
-
-/* @media (max-width: 768px) {
-  #app {
-    width: 100%;
-  }
-} */
 
 @media (max-width: 400px) {
   #app {
@@ -91,11 +70,8 @@ body {
   }
 
   .app-body {
+    background-color: #1e1e1e;
     width: 100%;
-    float: none;
+    float: left;
   }
-
-  .app-body .app-content {
-    float: none;
-  }
-}
+} */
