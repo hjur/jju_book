@@ -1,6 +1,6 @@
 <template>
   <div class="app-footer">
-    <hr class="division_line">
+    <hr class="division-line">
     footer
   </div>
 </template>

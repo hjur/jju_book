@@ -1,14 +1,8 @@
 <template>
-  <div>
-    <span class="side-menu-btn" :style="menuStyle" @click="openMenu()">
-      menu
-    </span>
-    <div class="page-overlay" :style="sideStyle" @click="closeMenu()">
-
-    </div>
-    <div class="side-menu-container animate" :style="sideStyle" style="z-index:5">
-      <button class="menu-depth1" @click="closeMenu()">Close Menu</button>
-      <hr class="division_line">
+  <div :class="{'side-wrap-block':shwoSideBar ,'side-wrap-none':!shwoSideBar  }">
+    <div class="page-overlay" v-show="shwoSideBar" @click="closeMenu()"> </div>
+    <div class="side-menu-container animate" style="z-index:5">
+      <hr class="division-line">
       <button class="menu-depth1" @click="goMenu('ETC')">ETC</button>
       <button class="menu-depth1" @click="open2depth('NOTE')">NOTE</button>
       <div v-show="show2depth == 'NOTE'">
@@ -21,10 +15,16 @@
 </template>
 
 <script>
+import { DOM } from "Constant/index";
+
 import "Style/aside/aside.css"
+
 export default {
   name: 'app-aside',
-  mounted() {
+  computed: {
+    shwoSideBar: function () {
+      return this.$store.getters.$_dom_use_sidebar;
+    }
   },
   methods: {
     goMenu(menuName) {
@@ -32,22 +32,8 @@ export default {
         name: menuName
       })
     },
-    openMenu() {
-      this.sideStyle = {
-        'display': 'block',
-      }
-      this.menuStyle = {
-        'display': 'none',
-      }
-
-    },
     closeMenu() {
-      this.sideStyle = {
-        'display': 'none',
-      }
-      this.menuStyle = {
-        'display': 'block',
-      }
+      this.$store.commit(DOM.SET_SIDEBAR, false)
     },
     open2depth(openDepthNM) {
 
@@ -61,11 +47,9 @@ export default {
   data() {
     return {
       show2depth: null,
+
       sideStyle: {
         'display': 'none'
-      },
-      menuStyle: {
-        'display': 'block'
       },
     }
   }

@@ -20,15 +20,23 @@ body {
   margin: 0 auto;
 }
 
+
 .app-header {
   background-color: #282828;
   color: #d0b344;
   height: 80px;
-}
 
+}
 
 .app-body {
   background-color: #1e1e1e;
+  float: right;
+  width: calc(100% - 200px);
+}
+
+.app-body .content-wrap {
+  background-color: #1e1e1e;
+  margin: 10px;
 }
 
 .app-footer {
@@ -38,7 +46,7 @@ body {
   height: 150px;
 }
 
-.division_line {
+.division-line {
   display: block;
   height: 0.5px;
   margin: 0;
@@ -48,30 +56,51 @@ body {
   box-sizing: border-box;
 }
 
-/* @media (max-width: 1220px) {
-  #app {
-    width: 95%;
-  }
+.division-line-vertical {
+  display: block;
+  width: 0.5px;
+  margin: 0;
+  border-width: 1px 0 0;
+  border-left: 1px solid #4e4e4e;
+  background-color: #4e4e4e;
+  box-sizing: border-box;
 }
 
-@media (max-width: 400px) {
-  #app {
-    width: 100%;
+.side-wrap-block {
+  display: block;
+}
+
+.side-wrap-none {
+  display: none;
+}
+
+
+/* 5000 보다 작을때 적용*/
+@media (max-width:5000px) {
+  .side-wrap-block {
+    display: block;
   }
 
-  .app-header {
-    height: 80px;
+  .side-wrap-none {
+    display: block;
   }
 
-  .app-aside {
-    width: 100%;
-    height: 300px;
+}
+
+/* 400 보다 작을때 적용*/
+@media (max-width:400px) {
+  .side-wrap-block {
+    display: block;
+  }
+
+  .side-wrap-none {
     display: none;
   }
 
   .app-body {
     background-color: #1e1e1e;
-    width: 100%;
     float: left;
+    width: 100%;
   }
-} */
+
+}

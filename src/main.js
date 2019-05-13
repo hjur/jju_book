@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 
@@ -6,11 +7,16 @@ import App from './App.vue'
 import router from 'Config/route'
 Vue.use(VueRouter)
 
+//상태관리
+import store from 'Store/index'
+Vue.use(Vuex)
+
 //■□■□■□■□■□■□■□■□■□■□■□■□ CREATE VUE APP ■□■□■□■□■□■□■□■□■□■□■□■□■□
 let vm = new Vue({
   el: '#app',
   render: h => h(App),
-  router
+  router,
+  store
 })
 
 //■□■□■□■□■□■□■□■□■□■□■□■□ NATIVE APP INTERFACE ■□■□■□■□■□■□■□■□■□■□■□
