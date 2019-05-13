@@ -1,14 +1,12 @@
 <template>
   <div id="app">
     <app-aside> </app-aside>
-    <hr class="division_line">
-
     <app-header> </app-header>
-    <hr class="division_line">
-
-    <router-view ref="view" class="app-body">
-    </router-view>
-    <app-footer> </app-footer>
+    <hr class="division-line">
+    <div class="app-body">
+      <router-view ref="view" class="content-wrap"> </router-view>
+    </div>
+    <!-- <app-footer> </app-footer> -->
   </div>
 </template>
 
@@ -24,6 +22,11 @@ export default {
     'app-header': appHeader,
     'app-aside': appAside,
     'app-footer': appFooter
+  },
+  computed: {
+    shwoSideBar: function () {
+      return this.$store.getters.$_dom_use_sidebar;
+    }
   },
   data() {
     return {

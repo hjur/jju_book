@@ -2,3 +2,25 @@
 header
 
 */
+
+.side-menu-btn {
+  display: none;
+}
+
+.hd-align {
+  text-align: left;
+  padding-top: 20px;
+}
+
+@media (max-width:400px) {
+  .side-menu-btn {
+    display: block;
+    color: #C7444A;
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding-top: 20px;
+    margin: 3px;
+    margin-right: 10px;
+  }
+}
