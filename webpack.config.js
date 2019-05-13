@@ -65,6 +65,9 @@ module.exports = {
       'Common': path.resolve(__dirname, './src/common'),
       'Images': path.resolve(__dirname, './src/assets/images'),
       'Style': path.resolve(__dirname, './src/assets/style'),
+      //vuex
+      'Constant': path.resolve(__dirname, './src/vuex/constant'),
+      'Store': path.resolve(__dirname, './src/vuex/store'),
       //modules
       'Modules': path.resolve(__dirname, '.node_modules'),
     },
