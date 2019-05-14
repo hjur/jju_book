@@ -10,36 +10,27 @@ html {
 }
 
 body {
-  background-color: #282828;
-  color: #9a9b99;
+  background-color: #ffffff;
+  color: #161616;
 }
 
 #app {
   width: 100%;
   margin: 0 auto;
-}
-
-.app-theme-header {
-  background-color: #282828;
-  color: #d0b344;
-}
-
-.app-theme-content {
-  background-color: #1e1e1e;
+  float: left;
+  overflow: hidden;
 }
 
 .app-header {
   height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .app-body {
   float: right;
   width: calc(100% - 200px);
-}
-
-.app-body .content-wrap {
-  margin: 10px;
-  font-size: 1.5em;
 }
 
 
@@ -49,16 +40,6 @@ body {
   margin: 0;
   border-width: 1px 0 0;
   border-top: 1px solid #4e4e4e;
-  background-color: #4e4e4e;
-  box-sizing: border-box;
-}
-
-.division-line-vertical {
-  display: block;
-  width: 0.5px;
-  margin: 0;
-  border-width: 1px 0 0;
-  border-left: 1px solid #4e4e4e;
   background-color: #4e4e4e;
   box-sizing: border-box;
 }

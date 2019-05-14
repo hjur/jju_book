@@ -1,0 +1,42 @@
+/*
+app theme css
+
+*/
+
+.dark .app-theme-header {
+  background-color: #282828;
+  color: #d0b344;
+}
+
+.dark .app-theme-content {
+  background-color: #1e1e1e;
+}
+
+.dark .menu-depth1-color {
+  background-color: #272727;
+  color: #C7444A;
+}
+
+.dark .menu-depth2-color {
+  background-color: #383838;
+  color: rgb(203, 141, 245);
+}
+
+.white .app-theme-header {
+  background-color: #ffffff;
+  color: #d0b344;
+}
+
+.white .app-theme-content {
+  background-color: #ffffff;
+}
+
+.white .menu-depth1-color {
+  background-color: #ffffff;
+  color: #C7444A;
+}
+
+.white .menu-depth2-color {
+  background-color: #ffffff;
+  color: rgb(117, 52, 160);
+}

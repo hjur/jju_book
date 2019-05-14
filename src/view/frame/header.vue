@@ -1,7 +1,8 @@
 <template>
   <div class="app-header app-theme-header">
-    <img src="../../assets/images/frame/menu.png" class="side-menu-btn" @click="controlMenu()">
+    <img src="../../assets/images/frame/menu_white.png" class="side-menu-btn" @click="controlMenu()">
     <div class="hd-align" @click="goHome()">JJU-BOOK :-)</div>
+    <hr class="division-line" style="margin-left:-10px">
   </div>
 </template>
 

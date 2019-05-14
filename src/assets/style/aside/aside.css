@@ -9,7 +9,7 @@ aside
   position: fixed !important;
   z-index: 1;
   overflow: auto;
-  margin-top: 80px;
+  margin-top: 70px;
   border-right: 1px solid #4e4e4e;
 }
 
@@ -43,11 +43,8 @@ aside
   }
 }
 
-
 .menu-depth1 {
   width: 100%;
-  background-color: #272727;
-  color: #C7444A;
   text-align: left;
   padding: 8px 16px;
   display: block;
@@ -63,8 +60,6 @@ aside
 
 .menu-depth2 {
   width: 100%;
-  background-color: #383838;
-  color: rgb(203, 141, 245);
   font-weight: bold;
   text-align: left;
   padding: 8px 16px;

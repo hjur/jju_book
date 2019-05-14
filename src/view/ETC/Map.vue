@@ -7,6 +7,7 @@
 
 <script>
 import axios from 'axios';
+import "Style/content/map/map.css"
 
 export default {
   name: 'domestic-map',

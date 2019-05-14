@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" class="white">
     <app-aside> </app-aside>
     <app-header> </app-header>
-    <hr class="division-line">
+    <hr class="division-line" style="margin-top:85px;position:fixed;">
     <div class="app-body app-theme-content">
       <router-view ref="view" class="content-wrap"> </router-view>
     </div>
@@ -15,6 +15,8 @@ import appHeader from "View/frame/header.vue"
 import appAside from "View/frame/aside.vue"
 import appFooter from "View/frame/footer.vue"
 import "Style/default.css"
+import "Style/theme.css"
+import "Style/content/content.css"
 
 export default {
   name: 'app',
