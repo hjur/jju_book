@@ -4,7 +4,6 @@ aside
 
 
 .side-menu-container {
-  background-color: #272727;
   height: 100%;
   width: 200px;
   position: fixed !important;
@@ -55,13 +54,17 @@ aside
   border: none;
   white-space: normal;
   float: none;
-  outline: 0
+  outline: 0;
+  font-family: "KimNamyun",
+    cursive;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .menu-depth2 {
   width: 100%;
   background-color: #383838;
-  color: #8080FF;
+  color: rgb(203, 141, 245);
   font-weight: bold;
   text-align: left;
   padding: 8px 16px;
@@ -70,7 +73,10 @@ aside
   border: none;
   white-space: normal;
   float: none;
-  outline: 0
+  outline: 0;
+  font-family: "KimNamyun",
+    cursive;
+  font-size: 1.5em;
 }
 
 /* 5000 보다 작을때 적용*/

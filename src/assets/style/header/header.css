@@ -9,7 +9,9 @@ header
 
 .hd-align {
   text-align: left;
-  padding-top: 20px;
+  padding-top: 0px;
+  font-family: "Shadows Into Light";
+  font-size: 3em;
 }
 
 @media (max-width:400px) {

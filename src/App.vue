@@ -3,7 +3,7 @@
     <app-aside> </app-aside>
     <app-header> </app-header>
     <hr class="division-line">
-    <div class="app-body">
+    <div class="app-body app-theme-content">
       <router-view ref="view" class="content-wrap"> </router-view>
     </div>
     <!-- <app-footer> </app-footer> -->

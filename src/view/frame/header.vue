@@ -1,7 +1,7 @@
 <template>
-  <div class="app-header">
+  <div class="app-header app-theme-header">
     <img src="../../assets/images/frame/menu.png" class="side-menu-btn" @click="controlMenu()">
-    <div class="hd-align">JJU-BOOK</div>
+    <div class="hd-align" @click="goHome()">JJU-BOOK :-)</div>
   </div>
 </template>
 
@@ -18,12 +18,12 @@ export default {
   components: {
   },
   methods: {
+    goHome() {
+      this.$router.push({
+        name: "mainPage"
+      })
+    },
     controlMenu() {
-      // if (($(".side-wrap-block") != null && this.cntlSideBar)) {
-      //   this.cntlSideBar = false
-      // } else {
-      //   this.cntlSideBar = !this.cntlSideBar
-      // }
       this.$store.commit(DOM.SET_SIDEBAR, !this.$store.getters.$_dom_use_sidebar)
     }
   },
