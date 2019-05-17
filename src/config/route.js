@@ -6,8 +6,11 @@ import Main from 'View/Main.vue';
 import ETC from 'View/ETC/EtcMain.vue';
 //note 카테고리
 import MdGrammar from 'View/note/markdown/grammar.vue';
-import whatPy from 'View/note/python/whatPy.vue';
 import DomesticMap from 'View/ETC/Map.vue';
+
+//파이썬
+import python from "./route/python.js"
+
 //에러페이지
 import PageNotFound from 'View/PageNotFound.vue';
 
@@ -26,14 +29,11 @@ const routes = [{
     path: root.concat('/mdGrammar'),
     component: MdGrammar,
   }, {
-    name: 'what-py',
-    path: root.concat('/whatPy'),
-    component: whatPy,
-  }, {
     name: 'domestic-map',
     path: root.concat('/domesticMap'),
     component: DomesticMap,
   }]
+  .concat(python)
   //404가 가장 마지막에 위치해야함
   .concat({
     name: '404',
@@ -46,7 +46,7 @@ const routes = [{
   })
 
 const router = new VueRouter({
-  // mode: 'history',
+  mode: 'history',
   routes: routes,
   //스크롤 이동 시 위치 to, from으로 분기 가능
   scrollBehavior(to, from, savedPosition) {

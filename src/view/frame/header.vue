@@ -23,6 +23,9 @@ export default {
       this.$router.push({
         name: "mainPage"
       })
+
+      this.$store.commit(DOM.SET_SIDEBAR, false)
+
     },
     controlMenu() {
       this.$store.commit(DOM.SET_SIDEBAR, !this.$store.getters.$_dom_use_sidebar)

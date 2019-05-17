@@ -1,23 +1,23 @@
 <template>
-  <div>
-    {{msg}}
-  </div>
+  <section>
+    <reference></reference>
+  </section>
 </template>
 
 <script>
+import reference from "MarkDown/etc/reference.md"
 
 export default {
   name: 'etcMain',
   computed: {},
   components: {
+    'reference': reference
   },
   data() {
     return {
-      msg: 'etc 메인',
     }
   }
 }
-// import "SharedStyles/popup/popup.css";
 </script>
 
 <style>

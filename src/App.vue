@@ -6,15 +6,14 @@
     <div class="app-body app-theme-content">
       <router-view ref="view" class="content-wrap"> </router-view>
     </div>
-    <!-- <app-footer> </app-footer> -->
   </div>
 </template>
 
 <script>
 import appHeader from "View/frame/header.vue"
 import appAside from "View/frame/aside.vue"
-import appFooter from "View/frame/footer.vue"
 import "Style/default.css"
+import "Style/markdown.css"
 import "Style/theme.css"
 import "Style/content/content.css"
 
@@ -23,7 +22,6 @@ export default {
   components: {
     'app-header': appHeader,
     'app-aside': appAside,
-    'app-footer': appFooter
   },
   computed: {
     shwoSideBar: function () {

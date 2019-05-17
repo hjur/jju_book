@@ -2,12 +2,14 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 import dom from "./modules/common/dom";
+import menu from "./modules/menu";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   modules: {
-    dom: dom
+    dom: dom,
+    menu: menu
   }
 })
 
