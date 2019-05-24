@@ -1,5 +1,4 @@
 import whatPy from 'View/note/python/whatPy.vue';
-import py01IO from 'View/note/python/py01IO.vue';
 
 const root = '/';
 const python = [{
