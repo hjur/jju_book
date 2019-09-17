@@ -10,15 +10,22 @@ h2 {
 }
 
 code {
-  font-family: "KimNamyun"
+  font-family: "KimNamyun";
+}
+
+pre {
+  background-image: linear-gradient(#ddd2a2 1px, transparent 1px);
+  background-size: 100% 1.35em;
 }
 
 blockquote {
+  width: 80%;
   background-color: #faefc6b6;
   border-left: 10px solid rgb(238, 99, 106);
   margin: 10px;
   padding: 10px;
 }
+
 
 th {
   background-color: rgba(0, 0, 0, 0.692);

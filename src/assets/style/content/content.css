@@ -12,7 +12,7 @@ app content
   overflow: auto;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .content-wrap {
     width: 100%;
   }

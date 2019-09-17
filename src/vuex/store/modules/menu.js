@@ -30,6 +30,22 @@ const menun = {
           route: 'what-py'
         }, ]
       },
+      {
+        id: 'java',
+        title: 'JAVA ↓',
+        depth2: [{
+          title: 'JAVA',
+          route: 'what-java'
+        }, ]
+      },
+      {
+        id: 'frontEnd',
+        title: 'FRONT END ↓',
+        depth2: [{
+          title: 'javaScript',
+          route: 'js-study'
+        }, ]
+      },
     ]
   },
   getters: {

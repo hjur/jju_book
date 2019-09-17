@@ -63,7 +63,7 @@ body {
 }
 
 /* 400 보다 작을때 적용*/
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .side-wrap-block {
     display: block;
   }
@@ -83,4 +83,5 @@ body {
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KimNamyun.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-size: 1em;
 }

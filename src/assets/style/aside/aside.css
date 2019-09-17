@@ -91,7 +91,7 @@ aside
 }
 
 /* 400 보다 작을때 적용*/
-@media (max-width:400px) {
+@media (max-width:500px) {
   .page-overlay {
     display: block;
   }

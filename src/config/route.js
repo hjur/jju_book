@@ -8,8 +8,12 @@ import ETC from 'View/ETC/EtcMain.vue';
 import MdGrammar from 'View/note/markdown/grammar.vue';
 import DomesticMap from 'View/ETC/Map.vue';
 
+//java
+import java from "./route/java.js"
 //파이썬
 import python from "./route/python.js"
+//프론트엔드 
+import FrontEnd from "./route/FrontEnd.js"
 
 //에러페이지
 import PageNotFound from 'View/PageNotFound.vue';
@@ -34,6 +38,8 @@ const routes = [{
     component: DomesticMap,
   }]
   .concat(python)
+  .concat(java)
+  .concat(FrontEnd)
   //404가 가장 마지막에 위치해야함
   .concat({
     name: '404',
