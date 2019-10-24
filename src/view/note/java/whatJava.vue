@@ -1,11 +1,13 @@
 <template>
   <div>
     <whatJava></whatJava>
+    <exJava></exJava>
   </div>
 </template>
 
 <script>
 import whatJava from "MarkDown/note/java/whatJava.md"
+import exJava from "MarkDown/note/java/exception.md"
 import { DOM } from "Constant/index";
 
 export default {
@@ -13,6 +15,7 @@ export default {
   computed: {},
   components: {
     "whatJava": whatJava,
+    "exJava": exJava,
   },
   mounted() {
     this.$nextTick(() => {
