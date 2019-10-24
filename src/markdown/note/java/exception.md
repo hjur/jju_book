@@ -72,7 +72,7 @@ getMessage() :
 
 ## 멀티 catch 블럭
 
-- java 1.7부터 '|' 기호를 구분자로 하여 사용 가능 
+- JDK 1.7부터 '|' 기호를 구분자로 하여 사용 가능 
 - 연결된 예외 클래스가 조상과 자손의 관계에 있다면 컴파일 에러 발생(조상만 사용하여 불필요한 코드 제거 의미) 
 - 공통 분모인 조상예외 클래스에 선언된 멤버만 사용 가능
  
@@ -92,5 +92,54 @@ getMessage() :
 ![ex_003](../../../assets/images/note/java/ex_003.png)
 
 - 메서드 예외<br>
-메서드의 throws에 명시하는 것은 예외를 처리하는것이 아니고 자신을 호출한 메서드에게 예외를 전달하여 처리를 떠맡기는 것이다. 
-![ex_004](../../../assets/images/note/java/ex_004.png)
+메서드의 throws에 명시하는 것은 예외를 처리하는것이 아니고 자신을 호출한 메서드에게 예외를 전달하여 처리를 떠맡기는 것이다. <br>
+![ex_004](../../../assets/images/note/java/ex_004.png)<br>
+★ fn2() - catch 구문의 throw 는 예외 되던지기(exception re-throwing)
+
+## finally 
+- 예외의 발생여부에 상관없이 실행
+- try-catch문의 끝에 선택적으로 덧붙여 사용
+- ☆ finally 에서도 throw 가능 
+
+## 자동 자원 반환 try-with-resources
+- JDK 1.7 부터 추가된 try-catch 문의 변형
+
+기존 finally 구문을 활용한 자원 해제 <br>
+![ex_005](../../../assets/images/note/java/ex_005.png)<br>
+
+try-with-resources 사용<br>
+- 중첩 가능(구분자 ; )<br>
+- try 블럭 괄호 안에 변수를 선언하는 것도 가능하며, 선언된 변수는 try 블럭 내에서만 사용 가능. 
+![ex_006](../../../assets/images/note/java/ex_006.png)<br>
+
+>
+> ```
+> 자동으로 객체의 close()가 호출될 수 있으려면, 클래스가 AutoCloseable > I/F 구현체여야 한다. 
+> 
+> public interface AutoCloseable {
+>     void close() throws Exception;
+> }
+> 
+> ```
+
+```
+try-catch 문을 사용했다면 먼저 발생한 WorkEx는 무시되고 CloseEx 만 출력됐겠지만
+Suppressed 머릿말과 함께 억제된 예외 정보도 출력
+```
+![ex_007](../../../assets/images/note/java/ex_007.png)<br>
+★ Exception 클래스를 상속받아서 WorkEx, CloseEx와 같은 사용자정의 예외 생성 가능 
+
+## 연결된 예외 chained exception
+
+> ``` 
+> try {
+>  // raise error
+> }catch(Ex1 e1){
+>       Ex2 e2 = new Ex2("ex2");
+>       e2.initCause(e1);
+>       throw e2;
+> }
+>
+> * Throwable initCause(Throwable cause) 지정한 예외를 원인 예외로 등록
+> * Throwable getCause() 원인 예외 반환 
+> ```
