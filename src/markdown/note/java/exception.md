@@ -106,10 +106,11 @@ getMessage() :
 
 기존 finally 구문을 활용한 자원 해제 <br>
 ![ex_005](../../../assets/images/note/java/ex_005.png)<br>
+finally 블럭에서 예외 발생하면 try 블럭 예외는 무시됨<br>
 
-try-with-resources 사용<br>
+try-with-resources 사용
 - 중첩 가능(구분자 ; )<br>
-- try 블럭 괄호 안에 변수를 선언하는 것도 가능하며, 선언된 변수는 try 블럭 내에서만 사용 가능. 
+- try 블럭 괄호 안에 변수를 선언하는 것도 가능하며, 선언된 변수는 try 블럭 내에서만 사용 가능. <br>
 ![ex_006](../../../assets/images/note/java/ex_006.png)<br>
 
 >
