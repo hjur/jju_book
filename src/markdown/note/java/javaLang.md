@@ -97,3 +97,94 @@ String str = String.valueOf(10); // 성능 ↗<br>
 - String > 기본형 <br>
 int i = Integer.parseInt("-100");//JDK1.7부터 부호 허용<br>
 int i = Integer.valueOf("100");//반환 타입은 integer, 내부에서 parseInt 를 호출하고 있기 때문에 성능은 동일 <br>
+
+### StringBuffer / StringBuilder
+#### StringBuffer
+- 생성할 때 지정된 문자열 변경 가능 
+
+- 생성할 때 버퍼 크기 지정이 가능하다 <br>
+생성된 크기 = 지정된 크기 + 16(기본 크기 16)
+
+- append() 이용한 크기 변경도 가능 <br>
+과정 : new char[] > arraycopy  ; 작업효율 떨어짐
+
+- equals메서드 오버라이딩 되어 있지 않아서, toString() 으로 새로운 string 인스턴스를 생성해야 값 비교 가능 
+
+- 멀티쓰레드에 안전 (동기화) > 멀티쓰레드로 작성된 프로그램이 아닌 경우 불필요하게 성능 저하를 야기한다고 함
+
+#### StringBuilder
+- StringBuffer의 단일쓰레드에 안전
+- 선언부분만 바꾸면 될 정도로 완전 동일하게 구현되어 있다. <br>
+StringBuffer도 성능이 좋기 때문에 반드시 성능향상이 필요한 경우가 아니면 굳이 변경할 필요는 없음 
+
+### Math클래스 
+- 성능을 위해 JVM이 설치된 OS의 메서드를 사용 <br>
+컴퓨터마다 결과가 상이할 수 있음 
+
+- 정수 / 정수 는 소숫점을 반환하지 않는다. <br>
+System.out.println(1097/100);   // 10
+System.out.println(1097/100.0); // 10.97
+
+- Exact ; JAK1.8 추가 , 정수형 연산에서 발생할 수 있는 오버플로우 감지 > 예외 발생 
+
+#### StricMath클래스 
+- 성능은 다소 포기하고, OS 타지 않는 클래스 
+
+### 래퍼(wrapper)클래스 
+- 객체가 아닌 8개의 기본형의 값을 객체로 사용할 때 필요 <br>
+boolean > Boolean <br>
+char > Character <br>
+byte > Byte <br>
+short > Short <br>
+int > Integer <br>
+long > Long <br>
+float > Float <br>
+double > Double  <br>
+
+### 오토박싱 / 언박싱 
+- 기본형 > 래퍼클래스 : 오토박싱(autoboxing)
+- 래퍼클래스 > 기본형 : 언박싱(unboxing)
+- 기본형과 참조형 간의 연산 가능 <br>
+컴파일러가 자동으로 변환하는 코드를 넣어준다.  <br>
+JDK 1.5 이전에는 기본형과 참조형 간 연산이 불가 <br>
+
+### 유용한 클래스 
+#### java.util.Objects클래스 
+```
+Objects.equals ; null 체크 가능
+    if(a != null && a.equals(b))
+    ↓
+    if(Objects.equals(a, b)) 
+    //a,b 가 모두 null 일 때 true 반환
+
+Objects.deepEquals : 다차원 비교 가능 
+    String[][] str2D = new String[][]{{"a","b"}{"A","B"}};
+    String[][] str2D2 = new String[][]{{"a","b"}{"A","B"}};
+    Objects.equals(str2D,str2D2) // false
+    Objects.deepEquals(str2D,str2D2) // true 
+```
+#### java.util.Random 클래스
+- 난수 생성<br>
+Math.random()이 내부적으로 Random 클래스를 사용하고 있어서 별 차이 없음 
+
+#### java.util.regex 정규식(Regular Expression)
+- 텍스트 데이터 중 원하는 패턴으로 문자열 찾음
+
+#### java.util.Scanner 클래스 
+- 화면, 파일, 문자열과 같은 입력소스로부터 문자데이터를 읽어오는데 도움을 줌
+
+#### java.util.StringTokenizer 클래스 
+- 구분자 기준으로 문자열 자르는데 사용, 복잡한 정규식은 불가 
+split, Scanner 등이 있지만 전체 토큰수(countTokens(), 남은 토큰 유무(hasTokens()), 다음 토큰 반환(nextTokens()) 등 유용한 메서드 지원
+```
+String req = "1,2,3,4"
+String[] res1 = req.split(",");
+Scanner res2 = new Scanner(req.useDelimiter(","));
+StringTokenizer res3 = new StringTokenizer(req, ",");
+```
+#### java.math.BigInteger클래스 
+- long(가장 큰 정수형) 타입보다 큰 값을 다룰 수 있지만 성능은 떨어진다. 
+
+#### java.math.BigDecimal클래스 
+- 정수를 이용해 실수를 표현, 실수를 정수와 10의 제곱의 곱으로 표현한다. 
+
